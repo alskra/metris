@@ -30,7 +30,8 @@
 			right: 0;
 			bottom: 0;
 			left: 0;
-			background: url("../img/header-bg.jpg") no-repeat 50% 0 / cover;
+			background: url("../img/header-bg.jpg") no-repeat 50% 0 / cover,
+			linear-gradient(-24deg, #5a3081 0%, #81306e 100%);
 			clip-path: polygon(
 					0 0,
 					100% 0,
