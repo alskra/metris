@@ -40,9 +40,14 @@
 			"dest": "/favicon$1"
 		},
 		{
-			"src": "(.*)",
+			"src": "(.*\\.html$)",
 			"headers": {"cache-control": "max-age=0,must-revalidate"},
 			"dest": "$1"
+		},
+		{
+			"src": ".*",
+			"headers": {"cache-control": "max-age=0,must-revalidate"},
+			"dest": "/index.html"
 		}
 	]
 }
