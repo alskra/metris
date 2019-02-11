@@ -47,6 +47,7 @@
 				display: flex;
 				align-items: center;
 				padding: 20px xl-to-xs(45, 15);
+				min-height: 81px + 40px;
 				max-width: none;
 
 				@media (width < env(--vw-md)) {
