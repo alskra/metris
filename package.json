@@ -1,0 +1,67 @@
+{
+  "name": "metris",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --modern",
+    "lint": "vue-cli-service lint",
+    "imagemin": "node imagemin.config.js",
+    "now-build": "npm run build",
+    "now": "now && now alias"
+  },
+  "dependencies": {
+    "css-vars-ponyfill": "^1.16.4",
+    "focus-visible": "^4.1.5",
+    "focus-within": "^3.0.2",
+    "normalize.css": "^8.0.1",
+    "vue": "^2.6.4"
+  },
+  "devDependencies": {
+    "@csstools/postcss-sass": "^4.0.0",
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "babel-eslint": "^10.0.1",
+    "css-mqpacker": "^7.0.0",
+    "eslint": "^5.13.0",
+    "eslint-plugin-vue": "^5.1.0",
+    "imagemin": "^6.1.0",
+    "imagemin-gifsicle": "^6.0.1",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^7.0.0",
+    "imagemin-svgo": "^7.0.0",
+    "postcss-functions": "^3.0.0",
+    "postcss-preset-env": "^6.5.0",
+    "postcss-pxtorem": "^4.0.1",
+    "postcss-scss": "^2.0.0",
+    "pug": "^2.0.3",
+    "pug-bem": "^1.0.1",
+    "pug-bem-plain-loader": "^1.0.5",
+    "pug-loader": "^2.4.0",
+    "sort-css-media-queries": "^1.4.3",
+    "style-resources-loader": "^1.2.1",
+    "vue-template-compiler": "^2.6.4"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead",
+    "IE > 10"
+  ]
+}

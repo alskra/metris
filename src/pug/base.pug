@@ -1,0 +1,40 @@
+block variables
+	-
+		let lang = 'ru';
+
+		let meta = {
+			viewport: 'width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no'
+		};
+
+doctype html
+html(lang=lang)
+	head
+		block title
+			title=htmlWebpackPlugin.options.title
+
+		block meta
+			meta(charset="utf-8")
+			meta(name="viewport" content=meta.viewport)
+
+		base(href=BASE_URL)
+
+		block favicon
+			link(rel="icon" href=`${BASE_URL}favicon.ico`)
+
+		block styles-head
+			style.
+				[inline-template] {
+					display: none;
+				}
+
+		block scripts-head
+	body
+		noscript
+			strong We're sorry but this app doesn't work properly without JavaScript enabled. Please enable it to continue.
+
+		block app
+			#app
+
+		block scripts-body
+		//- built files will be auto injected
+

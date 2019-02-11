@@ -1,0 +1,71 @@
+@function strip-unit($value) {
+	@if type-of($value) == 'number' and not unitless($value) {
+		@return $value / ($value * 0 + 1);
+	}
+
+	@return $value;
+}
+
+@function em($value, $context: 10px) {
+	@if (unitless($value)) {
+		$value: $value * 1px;
+	}
+
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return $value / $context * 1em;
+}
+
+@function rem($value, $context: 10px) {
+	@if (unitless($value)) {
+		$value: $value * 1px;
+	}
+
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return $value / $context * 1rem;
+}
+
+@function vw($value, $context: 1920px) {
+	@if (unitless($value)) {
+		$value: $value * 1px;
+	}
+
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return $value / $context * 100vw;
+}
+
+@function vh($value, $context: 1080px) {
+	@if (unitless($value)) {
+		$value: $value * 1px;
+	}
+
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return $value / $context * 100vh;
+}
+
+@function xl-to-xs($value-xl, $value-xs) {
+	@if (unitless($value-xl)) {
+		$value-xl: $value-xl * 1px;
+	}
+
+	@if (unitless($value-xs)) {
+		$value-xs: $value-xs * 1px;
+	}
+
+	@return calc(
+		#{$value-xl} -
+		(#{strip-unit($value-xl)} - #{strip-unit($value-xs)}) *
+		(env(--vw-xl) - 100vw) / (#{strip-unit(env(--vw-xl))} - #{strip-unit(env(--vw-xs))})
+	);
+}

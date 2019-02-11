@@ -1,0 +1,3 @@
+@function env($variable) {
+	@error "\"env()\" function was not provided by PostCSS or dollar-variable was used as passed argument";
+}

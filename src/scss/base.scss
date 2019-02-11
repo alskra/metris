@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,800&subset=cyrillic,cyrillic-ext,latin-ext');
+
+:root {
+	--color-primary: #60b646;
+	font-size: percentage(10 / 16);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:focus:not(:focus-visible) {
+	outline: none;
+}
+
+:focus-visible {
+	outline: 1px dotted currentColor;
+	outline: 5px auto -webkit-focus-ring-color;
+}
+
+::selection {
+	color: #ffffff;
+	background: var(--color-primary);
+}

@@ -1,0 +1,24 @@
+%reset {
+	all: initial;
+
+	// Overwrite browser dependent properties
+	quotes: "“" "”" "‘" "’";
+	font-family: var(--base-content_-_font-family);
+	text-align: left;
+	color: var(--base-content_-_color);
+	outline-color: var(--base-content_-_color);
+
+	&:focus-visible {
+		outline: 1px dotted currentColor;
+		outline: 5px auto -webkit-focus-ring-color;
+	}
+
+	// Overwrite some properties
+	display: block;
+	box-sizing: border-box;
+	hyphens: manual;
+}
+
+@mixin reset {
+	@extend %reset;
+}
