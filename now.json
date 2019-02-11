@@ -7,47 +7,5 @@
 			"src": "package.json",
 			"use": "@now/static-build"
 		}
-	],
-	"routes": [
-		{
-			"src": "^/css/(.*)",
-			"headers": {"cache-control": "max-age=31536000,immutable"},
-			"dest": "/css/$1"
-		},
-		{
-			"src": "^/img/(.*)",
-			"headers": {"cache-control": "max-age=31536000,immutable"},
-			"dest": "/img/$1"
-		},
-		{
-			"src": "^/js/(.*)",
-			"headers": {"cache-control": "max-age=31536000,immutable"},
-			"dest": "/js/$1"
-		},
-		{
-			"src": "^/upload/(.*)",
-			"headers": {"cache-control": "max-age=31536000,immutable"},
-			"dest": "/upload/$1"
-		},
-		{
-			"src": "^/favicon/(.*)",
-			"headers": {"cache-control": "max-age=31536000,immutable"},
-			"dest": "/favicon/$1"
-		},
-		{
-			"src": "^/favicon(\\.\\w+)",
-			"headers": {"cache-control": "max-age=31536000,immutable"},
-			"dest": "/favicon$1"
-		},
-		{
-			"src": "(.*\\.html$)",
-			"headers": {"cache-control": "max-age=0,must-revalidate"},
-			"dest": "$1"
-		},
-		{
-			"src": ".*",
-			"headers": {"cache-control": "max-age=0,must-revalidate"},
-			"dest": "/index.html"
-		}
 	]
 }

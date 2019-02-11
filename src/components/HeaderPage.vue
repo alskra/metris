@@ -158,6 +158,7 @@
 
 		@media (width < 768px) {
 			width: calc(100% - 18px);
+			padding-bottom: 30px;
 
 			& + & {
 				border-radius: 0;
