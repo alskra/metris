@@ -1,12 +1,9 @@
 <template lang="pug">
-	.base-button(
-		:is="tag"
-		:type="tag === 'button' ? 'button' : null"
-	)
+	.base-button(:is="tag")
 		slot(name="icon")
 
 		span.label
-			slot.trata
+			slot
 </template>
 
 <script>
@@ -53,6 +50,10 @@
 		&:not(:disabled) {
 			cursor: pointer;
 		}
+	}
+
+	.icon {
+		flex-shrink: 0;
 	}
 
 	.label {

@@ -2,8 +2,15 @@
 </template>
 
 <script>
+	import AgencyIcon from './AgencyIcon';
+	import ButtonPrimary from './ButtonPrimary';
+
 	export default {
-		name: 'HeaderPage'
+		name: 'HeaderPage',
+		components: {
+			AgencyIcon,
+			ButtonPrimary
+		}
 	};
 </script>
 
@@ -28,7 +35,7 @@
 					0 0,
 					100% 0,
 					100% 100%,
-					0 calc(100% - #{vh(200, 768)})
+					0 calc(100% - #{vw(200, env(--vw-xl))})
 			);
 		}
 
@@ -88,57 +95,61 @@
 	.menu {
 		display: flex;
 		flex-wrap: wrap;
-		//justify-content: center;
+		align-items: flex-end;
 		margin: 0 -9px;
 	}
 
 	.menu-item {
+		display: flex;
+		flex-flow: column;
 		position: relative;
 		margin: 0 9px;
 		padding: 30px 15px 65px;
 		width: calc(100% / 3 - 18px);
-		//min-width: calc(290px - 18px);
-		//max-width: calc(100% - 18px);
-		min-height: vh(275 + 39, 768);
 		background-color: #ffffff;
 		border-radius: 10px 10px 0 0;
 
 		@media (width >= 768px) {
+			&:nth-child(1) {
+				min-height: 275px + 39px + 34px;
+			}
+
+			&:nth-child(2) {
+				min-height: 275px + 39px;
+			}
+
 			&:nth-child(2),
 			&:nth-child(3) {
-				&::before {
-					content: '';
-					position: absolute;
-					bottom: vh(140, 768);
-					left: -28px;
-					margin-bottom: -10px;
-					border: 10px solid #ffffff;
-					border-top-color: transparent;
-					border-right-color: transparent;
-					border-radius: 50%;
-					width: 38px;
-					height: 38px;
-					transform: rotate(-45deg);
-				}
-
-				&::after {
-					content: '';
+				.menu-item-gutter {
 					position: absolute;
 					bottom: 0;
 					left: -18px;
 					width: 18px;
-					height: vh(140, 768);
+					height: vw(140, env(--vw-xl));
+					max-height: calc(275px + 39px - 10px - 9px);
 					background-color: #ffffff;
+
+					&::before {
+						content: '';
+						position: absolute;
+						top: -28px;
+						left: -10px;
+						border: 10px solid #ffffff;
+						border-top-color: transparent;
+						border-right-color: transparent;
+						border-radius: 50%;
+						width: 38px;
+						height: 38px;
+						transform: rotate(-45deg);
+					}
 				}
 			}
 
 			&:nth-child(3) {
-				&::before {
-					bottom: vh(100, 768);
-				}
+				min-height: 275px + 39px + 78px;
 
-				&::after {
-					height: vh(100, 768);
+				.menu-item-gutter {
+					height: vw(100, env(--vw-xl));
 				}
 			}
 		}
@@ -149,6 +160,50 @@
 			& + & {
 				border-radius: 0;
 			}
+		}
+	}
+
+	.menu-item-title {
+		@include reset;
+
+		margin-bottom: 20px;
+		font-size: rem(20);
+		font-weight: 800;
+		line-height: 1.25;
+		text-align: center;
+	}
+
+	.menu-item-icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 20px;
+		flex-grow: 1;
+	}
+
+	.menu-item-footer {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+
+		.base-button {
+			margin-bottom: 20px;
+		}
+	}
+
+	.menu-item-link {
+		@include reset;
+
+		max-width: 100%;
+		color: var(--base-content-link_-_color);
+		font-size: rem(13);
+		line-height: 1.25;
+		text-decoration: underline;
+		cursor: pointer;
+		transition: color 0.15s;
+
+		&:hover {
+			text-decoration: none;
 		}
 	}
 </style>
