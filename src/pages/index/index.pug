@@ -44,7 +44,7 @@ block app
 							v-if="currentTab === 1"
 							style="background-image: url(img/bg-1.jpg)"
 						)
-							img.tab-frame-item-img(
+							img.tab-frame-item-img.number-1(
 								src="img/imac3.png"
 								alt=""
 							)
@@ -66,14 +66,218 @@ block app
 											href=""
 										) Задать вопрос
 
-						.tab-frame-item(v-if="currentTab === 2")
-							base-container 2
+						.tab-frame-item(
+							v-if="currentTab === 2"
+							style="background-image: url(img/bg-2.jpg)"
+						)
+							img.tab-frame-item-img.number-1(
+								src="img/imac3.png"
+								alt=""
+							)
 
-						.tab-frame-item(v-if="currentTab === 3")
-							base-container 3
+							base-container
+								.tab-content
+									.tab-content-body
+										h3.tab-content-title Информация и обучение
+										p.tab-content-desc Обучение, новости и акции застройщиков – всё в одном приложении
 
-						.tab-frame-item(v-if="currentTab === 4")
-							base-container 4
+									.tab-content-actions
+										button-primary(
+											tag="a"
+											href=""
+										) Зарегистрироваться
+
+										button-link(
+											tag="a"
+											href=""
+										) Задать вопрос
+
+						.tab-frame-item(
+							v-if="currentTab === 3"
+							style="background-image: url(img/bg-3.jpg)"
+						)
+							img.tab-frame-item-img.number-1(
+								src="img/imac3.png"
+								alt=""
+							)
+
+							base-container
+								.tab-content
+									.tab-content-body
+										h3.tab-content-title Заголовок
+										p.tab-content-desc Один договор – доступ к сотням застройщиков
+
+									.tab-content-actions
+										button-primary(
+											tag="a"
+											href=""
+										) Зарегистрироваться
+
+										button-link(
+											tag="a"
+											href=""
+										) Задать вопрос
+
+						.tab-frame-item(
+							v-if="currentTab === 4"
+							style="background-image: url(img/bg-4.jpg)"
+						)
+							img.tab-frame-item-img.number-1(
+								src="img/imac3.png"
+								alt=""
+							)
+
+							base-container
+								.tab-content
+									.tab-content-body
+										h3.tab-content-title CRM
+										p.tab-content-desc Все этапы сделки под контролем
+
+									.tab-content-actions
+										button-primary(
+											tag="a"
+											href=""
+										) Зарегистрироваться
+
+										button-link(
+											tag="a"
+											href=""
+										) Задать вопрос
+
+			section-page(
+				inline-template
+				id="builder"
+			)
+				.section-page
+					base-container
+						h2.title Застройщикам
+
+					base-container
+						nav.tab-bar
+							button.tab-bar-item(
+								:class="{current: currentTab === 1}"
+								@click="currentTab = 1"
+							) +15 000 Агентств
+
+							button.tab-bar-item(
+								:class="{current: currentTab === 2}"
+								@click="currentTab = 2"
+							) Оплата за результат
+
+							button.tab-bar-item(
+								:class="{current: currentTab === 3}"
+								@click="currentTab = 3"
+							) Клиенты со всей России
+
+							button.tab-bar-item(
+								:class="{current: currentTab === 4}"
+								@click="currentTab = 4"
+							) ????
+
+					.tab-frame
+						.tab-frame-item(
+							v-if="currentTab === 1"
+							style="background-image: url(img/bg-5.jpg)"
+						)
+							img.tab-frame-item-img.number-2(
+								src="img/droid.png"
+								alt=""
+							)
+
+							base-container
+								.tab-content
+									.tab-content-body
+										h3.tab-content-title +15 000 Агентств
+										p.tab-content-desc Ваши объекты будут продавать тысячи агентов
+
+									.tab-content-actions
+										button-primary(
+											tag="a"
+											href=""
+										) Зарегистрироваться
+
+										button-link(
+											tag="a"
+											href=""
+										) Задать вопрос
+
+						.tab-frame-item(
+							v-if="currentTab === 2"
+							style="background-image: url(img/bg-6.jpg)"
+						)
+							img.tab-frame-item-img.number-2(
+								src="img/droid.png"
+								alt=""
+							)
+
+							base-container
+								.tab-content
+									.tab-content-body
+										h3.tab-content-title Оплата за результат
+										p.tab-content-desc Мы приведём к вам клиентов со всей России
+
+									.tab-content-actions
+										button-primary(
+											tag="a"
+											href=""
+										) Зарегистрироваться
+
+										button-link(
+											tag="a"
+											href=""
+										) Задать вопрос
+
+						.tab-frame-item(
+							v-if="currentTab === 3"
+							style="background-image: url(img/bg-7.jpg)"
+						)
+							img.tab-frame-item-img.number-2(
+								src="img/droid.png"
+								alt=""
+							)
+
+							base-container
+								.tab-content
+									.tab-content-body
+										h3.tab-content-title Клиенты со всей России
+										p.tab-content-desc Мы приведём к вам клиентов с оплатой за результат
+
+									.tab-content-actions
+										button-primary(
+											tag="a"
+											href=""
+										) Зарегистрироваться
+
+										button-link(
+											tag="a"
+											href=""
+										) Задать вопрос
+
+						.tab-frame-item(
+							v-if="currentTab === 4"
+							style="background-image: url(img/bg-8.jpg)"
+						)
+							img.tab-frame-item-img.number-2(
+								src="img/droid.png"
+								alt=""
+							)
+
+							base-container
+								.tab-content
+									.tab-content-body
+										h3.tab-content-title 1 договор – 1 менеджер
+										p.tab-content-desc десятки клиентов в месяц
+
+									.tab-content-actions
+										button-primary(
+											tag="a"
+											href=""
+										) Зарегистрироваться
+
+										button-link(
+											tag="a"
+											href=""
+										) Задать вопрос
 
 			section.page-index-section
 				base-container

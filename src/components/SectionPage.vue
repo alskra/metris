@@ -47,7 +47,7 @@
 		@include reset;
 
 		border-bottom: 6px solid transparent;
-		padding-right: 20px;
+		//padding-right: 20px;
 		padding-bottom: xl-to-xs(25, 13);
 		flex-shrink: 0;
 		max-width: calc(50% - #{xl-to-xs(60 / 2, 20 / 2)});
@@ -98,12 +98,22 @@
 
 	.tab-frame-item-img {
 		position: absolute;
-		right: xl-to-xs(84, 42);
-		bottom: xl-to-xs(-33, -17);
-		width: xl-to-xs(495, 277);
-		min-width: 277px;
-		max-width: 495px;
-		//height: 582px;
+
+		&.number-1 {
+			right: xl-to-xs(84, 42);
+			bottom: xl-to-xs(-33, -17);
+			width: xl-to-xs(495, 277);
+			min-width: 277px;
+			max-width: 495px;
+		}
+
+		&.number-2 {
+			right: xl-to-xs(92, 38);
+			bottom: 0;
+			width: xl-to-xs(553, 310);
+			min-width: 553px;
+			max-width: 310px;
+		}
 	}
 
 	.tab-content {
