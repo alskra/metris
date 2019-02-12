@@ -111,8 +111,8 @@
 			right: xl-to-xs(92, 38);
 			bottom: 0;
 			width: xl-to-xs(553, 310);
-			min-width: 553px;
-			max-width: 310px;
+			min-width: 310px;
+			max-width: 553px;
 		}
 	}
 

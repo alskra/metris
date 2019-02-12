@@ -21,6 +21,7 @@
 		color: #ffffff;
 		font-size: rem(15);
 		text-decoration: underline;
+		text-shadow: 0 0 1px rgba(#000000, 0.5);
 
 		&:not(:disabled) {
 			&:hover {
