@@ -37,20 +37,29 @@
 	}
 
 	.tab-bar {
-		display: flex;
 		position: relative;
 		z-index: 3;
-		overflow-x: auto;
+		//height: calc(#{xl-to-xs(20, 14)} * 1.25 + #{xl-to-xs(25, 13)} + 5px);
+		//overflow: hidden;
+	}
+
+	.tab-bar-scroll {
+		display: flex;
+		//margin-bottom: -30px;
+		//padding-bottom: 30px;
+		//overflow-x: scroll;
 	}
 
 	.tab-bar-item {
 		@include reset;
 
 		border-bottom: 6px solid transparent;
-		//padding-right: 20px;
 		padding-bottom: xl-to-xs(25, 13);
-		flex-shrink: 0;
-		max-width: calc(50% - #{xl-to-xs(60 / 2, 20 / 2)});
+		//flex-shrink: 0;
+		min-width: 40px;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
 		font-size: xl-to-xs(20, 14);
 		font-weight: 600;
 		line-height: 1.25;
@@ -58,7 +67,7 @@
 		transition: color 0.15s, border-bottom-color 0.15s;
 
 		& + & {
-			margin-left: xl-to-xs(60, 20);
+			margin-left: xl-to-xs(60, 5);
 		}
 
 		&:hover {

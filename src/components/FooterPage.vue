@@ -21,13 +21,14 @@
 	}
 
 	.row {
-		margin: -15px;
+		margin: -10px -15px;
 		display: flex;
+		align-items: center;
 		flex-wrap: wrap;
 	}
 
 	.col {
-		padding: 15px;
+		padding: 10px 15px;
 
 		@media (width < env(--vw-sm)) {
 			text-align: center;
@@ -38,7 +39,7 @@
 			width: calc((100% - 1074px) / 2);
 
 			@media (width < env(--vw-xl)) {
-				width: percentage(1/4);
+				width: percentage(1/3);
 			}
 
 			@media (width < env(--vw-sm)) {
@@ -47,10 +48,11 @@
 		}
 
 		&.center {
+			margin: 0 auto;
 			width: 1074px;
 
 			@media (width < env(--vw-xl)) {
-				width: percentage(1/2);
+				width: percentage(1/3);
 			}
 
 			@media (width < env(--vw-sm)) {
@@ -66,11 +68,15 @@
 
 	.content {
 		color: rgba(#000000, 0.4);
-		font-size: 13px;
-		line-height: 1.25;
+		font-size: rem(13);
+		line-height: 1.5;
 
 		p {
 			margin: 0;
+
+			&:not(:last-child) {
+				margin-bottom: 1em;
+			}
 		}
 
 		a {
@@ -90,6 +96,19 @@
 			@media (width < env(--vw-sm)) {
 				text-align: center;
 			}
+		}
+	}
+
+	.developer {
+		white-space: nowrap;
+
+		&::before {
+			content: '';
+			display: inline-block;
+			margin: 0 0.4em -4px 0;
+			width: 17px;
+			height: 17px;
+			background: url("../img/icons/png/dev-gvate.png") no-repeat 50% 50% / 100% 100%;
 		}
 	}
 </style>
