@@ -37,7 +37,6 @@
 		vertical-align: top;
 		justify-content: center;
 		align-items: center;
-		min-width: 0;
 		max-width: 100%;
 		line-height: 1.25;
 		text-align: center;

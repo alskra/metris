@@ -14,7 +14,7 @@
 </script>
 
 <style lang="scss" scoped>
-	.section-page-1 {
+	.page-index-section {
 		margin-bottom: xl-to-xs(50, 30);
 	}
 </style>

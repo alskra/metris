@@ -1,5 +1,5 @@
 <template lang="pug">
-	base-button.button-primary(:tag="tag")
+	base-button.button-link(:tag="tag")
 		slot
 </template>
 
@@ -7,7 +7,7 @@
 	import BaseButton from './BaseButton';
 
 	export default {
-		name: 'ButtonPrimary',
+		name: 'ButtonLink',
 		props: {
 			...BaseButton.props
 		}
@@ -15,17 +15,16 @@
 </script>
 
 <style lang="scss" scoped>
-	.button-primary {
-		border-radius: 4px;
+	.button-link {
 		padding: 0 40px;
 		height: 53px;
 		color: #ffffff;
 		font-size: rem(15);
-		background-color: var(--color-primary);
+		text-decoration: underline;
 
 		&:not(:disabled) {
 			&:hover {
-				background-color: #964182;
+				text-decoration: none;
 			}
 		}
 	}

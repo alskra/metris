@@ -9,12 +9,73 @@ block app
 			header-page(inline-template)
 				include ../../components/HeaderPage
 
-			section-page(inline-template)
+			section-page(
+				inline-template
+				id="agency"
+			)
 				.section-page
 					base-container
 						h2.title Агентствам
 
-			section.section-page-1
+					base-container
+						nav.tab-bar
+							button.tab-bar-item(
+								:class="{current: currentTab === 1}"
+								@click="currentTab = 1"
+							) База новостроек
+
+							button.tab-bar-item(
+								:class="{current: currentTab === 2}"
+								@click="currentTab = 2"
+							) Информация и обучение
+
+							button.tab-bar-item(
+								:class="{current: currentTab === 3}"
+								@click="currentTab = 3"
+							) ???
+
+							button.tab-bar-item(
+								:class="{current: currentTab === 4}"
+								@click="currentTab = 4"
+							) CRM
+
+					.tab-frame
+						.tab-frame-item(
+							v-if="currentTab === 1"
+							style="background-image: url(img/bg-1.jpg)"
+						)
+							img.tab-frame-item-img(
+								src="img/imac3.png"
+								alt=""
+							)
+
+							base-container
+								.tab-content
+									.tab-content-body
+										h3.tab-content-title База новостроек
+										p.tab-content-desc Мы даем вам базу новостроек, сервис, и платим вам комиссию
+
+									.tab-content-actions
+										button-primary(
+											tag="a"
+											href=""
+										) Зарегистрироваться
+
+										button-link(
+											tag="a"
+											href=""
+										) Задать вопрос
+
+						.tab-frame-item(v-if="currentTab === 2")
+							base-container 2
+
+						.tab-frame-item(v-if="currentTab === 3")
+							base-container 3
+
+						.tab-frame-item(v-if="currentTab === 4")
+							base-container 4
+
+			section.page-index-section
 				base-container
 					base-content
 						p.
