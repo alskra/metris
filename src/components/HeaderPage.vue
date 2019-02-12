@@ -3,12 +3,16 @@
 
 <script>
 	import AgencyIcon from './AgencyIcon';
+	import BuilderIcon from './BuilderIcon';
+	import DistributionIcon from './DistributionIcon';
 	import ButtonPrimary from './ButtonPrimary';
 
 	export default {
 		name: 'HeaderPage',
 		components: {
 			AgencyIcon,
+			BuilderIcon,
+			DistributionIcon,
 			ButtonPrimary
 		}
 	};
@@ -46,9 +50,14 @@
 			&.top {
 				display: flex;
 				align-items: center;
-				padding: 20px xl-to-xs(45, 15);
+				padding: 20px 45px;
 				min-height: 81px + 40px;
 				max-width: none;
+
+				@media (width < env(--vw-xl)) {
+					padding-left: 15px;
+					padding-right: 15px;
+				}
 
 				@media (width < env(--vw-md)) {
 					justify-content: center;
@@ -157,11 +166,17 @@
 		}
 
 		@media (width < 768px) {
-			width: calc(100% - 18px);
+			margin-bottom: 1px;
+			border-radius: 0;
 			padding-bottom: 30px;
+			width: calc(100% - 18px);
 
-			& + & {
-				border-radius: 0;
+			&:nth-child(1) {
+				border-radius: 10px 10px 0 0;
+			}
+
+			&:nth-child(3) {
+				//border-radius: 0 0 10px 10px;
 			}
 		}
 	}
@@ -206,6 +221,7 @@
 		transition: color 0.15s;
 
 		&:hover {
+			color: var(--base-content-link-hover_-_color);
 			text-decoration: none;
 		}
 	}

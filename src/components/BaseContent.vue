@@ -23,15 +23,15 @@
 
 		--base-content-headings_-_color: var(--base-content_-_color);
 		--base-content-headings_-_font-family: var(--base-content_-_font-family);
-		--base-content-headings_-_font-weight: 500;
+		--base-content-headings_-_font-weight: 800;
 		--base-content-headings_-_line-height: 1.25;
 
-		--base-content-heading-1_-_font-size: #{rem(48)};
-		--base-content-heading-2_-_font-size: #{rem(42)};
-		--base-content-heading-3_-_font-size: #{rem(36)};
-		--base-content-heading-4_-_font-size: #{rem(30)};
+		--base-content-heading-1_-_font-size: #{rem(50)};
+		--base-content-heading-2_-_font-size: #{rem(46)};
+		--base-content-heading-3_-_font-size: #{rem(40)};
+		--base-content-heading-4_-_font-size: #{rem(32)};
 		--base-content-heading-5_-_font-size: #{rem(24)};
-		--base-content-heading-6_-_font-size: #{rem(18)};
+		--base-content-heading-6_-_font-size: #{rem(16)};
 	}
 
 	@custom-selector :--headings
