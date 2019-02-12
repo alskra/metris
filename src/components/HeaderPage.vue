@@ -25,6 +25,7 @@
 		display: flex;
 		flex-flow: column;
 		position: relative;
+		margin-bottom: xl-to-xs(50, 30);
 		min-height: 100vh;
 
 		&::before {
