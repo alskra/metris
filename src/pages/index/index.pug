@@ -279,6 +279,141 @@ block app
 											href=""
 										) Задать вопрос
 
+			section-page(
+				inline-template
+				id="distribution"
+			)
+				.section-page
+					base-container
+						h2.title Дистрибьюторам
+
+					base-container
+						nav.tab-bar
+							button.tab-bar-item(
+								:class="{current: currentTab === 1}"
+								@click="currentTab = 1"
+							) 1 шаг
+
+							button.tab-bar-item(
+								:class="{current: currentTab === 2}"
+								@click="currentTab = 2"
+							) 2 шаг
+
+							button.tab-bar-item(
+								:class="{current: currentTab === 3}"
+								@click="currentTab = 3"
+							) 3 шаг
+
+							button.tab-bar-item(
+								:class="{current: currentTab === 4}"
+								@click="currentTab = 4"
+							) 4 шаг
+
+					.tab-frame
+						.tab-frame-item(
+							v-if="currentTab === 1"
+							style="background-image: url(img/bg-9.jpg)"
+						)
+							img.tab-frame-item-img.number-3(
+								src="img/phone.png"
+								alt=""
+							)
+
+							base-container
+								.tab-content
+									.tab-content-body
+										h3.tab-content-title Шаг 1
+										p.tab-content-desc Возьмите технологии и инструменты бля построения сети продаж новостроек
+
+									.tab-content-actions
+										button-primary(
+											tag="a"
+											href=""
+										) Зарегистрироваться
+
+										button-link(
+											tag="a"
+											href=""
+										) Задать вопрос
+
+						.tab-frame-item(
+							v-if="currentTab === 2"
+							style="background-image: url(img/bg-10.jpg)"
+						)
+							img.tab-frame-item-img.number-3(
+								src="img/phone.png"
+								alt=""
+							)
+
+							base-container
+								.tab-content
+									.tab-content-body
+										h3.tab-content-title Шаг 2
+										p.tab-content-desc Постройте эффективную сеть продажи новостроек на базе своего агентства
+
+									.tab-content-actions
+										button-primary(
+											tag="a"
+											href=""
+										) Зарегистрироваться
+
+										button-link(
+											tag="a"
+											href=""
+										) Задать вопрос
+
+						.tab-frame-item(
+							v-if="currentTab === 3"
+							style="background-image: url(img/bg-11.jpg)"
+						)
+							img.tab-frame-item-img.number-3(
+								src="img/phone.png"
+								alt=""
+							)
+
+							base-container
+								.tab-content
+									.tab-content-body
+										h3.tab-content-title Шаг 3
+										p.tab-content-desc Дайте доступ к вашему договору всем агентствам своего региона
+
+									.tab-content-actions
+										button-primary(
+											tag="a"
+											href=""
+										) Зарегистрироваться
+
+										button-link(
+											tag="a"
+											href=""
+										) Задать вопрос
+
+						.tab-frame-item(
+							v-if="currentTab === 4"
+							style="background-image: url(img/bg-12.jpg)"
+						)
+							img.tab-frame-item-img.number-3(
+								src="img/phone.png"
+								alt=""
+							)
+
+							base-container
+								.tab-content
+									.tab-content-body
+										h3.tab-content-title Шаг 4
+										p.tab-content-desc Станьте системообразующим игроком по новостройкам в своём регионе
+
+									.tab-content-actions
+										button-primary(
+											tag="a"
+											href=""
+										) Зарегистрироваться
+
+										button-link(
+											tag="a"
+											href=""
+										) Задать вопрос
+
 			section.page-index-section
 				base-container
 					base-content

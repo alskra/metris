@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Metris — сообщество профессионалов недвижимости</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
+		<base href="/">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#60b646">
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#81306e">
+<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+		<style>
+			[inline-template] {
+				display: none;
+			}
+			
+		</style>
+	<link href="/css/chunk-vendors.45c76c48.css" rel="preload" as="style"><link href="/css/index.d4360709.css" rel="preload" as="style"><link href="/js/chunk-vendors.f273eff7.js" rel="modulepreload" as="script"><link href="/js/index.e0576951.js" rel="modulepreload" as="script"><link href="/css/chunk-vendors.45c76c48.css" rel="stylesheet"><link href="/css/index.d4360709.css" rel="stylesheet"></head>
+	<body>
+		<noscript><strong>We're sorry but this app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript>
+		<base-page class="page-index">
+			<template>
+				<header-page inline-template>
+<header class="header-page">
+	<base-container class="top"><a class="logo" href="/" title="Metris"><img class="logo-img" src="img/metris.png" alt="Metris"></a></base-container>
+	<base-container class="middle">
+		<h1 class="title">Федера&shy;ль&shy;ный портал недвижи&shy;мос&shy;ти для профессио&shy;на&shy;лов</h1>
+	</base-container>
+	<base-container class="bottom">
+		<div class="menu">
+			<article class="menu-item">
+				<div class="menu-item-gutter"></div>
+				<h2 class="menu-item-title">Агентствам</h2>
+				<div class="menu-item-icon">
+					<agency-icon width="64" height="64"></agency-icon>
+				</div>
+				<footer class="menu-item-footer">
+					<button-primary tag="a" href="#agency">Хочу знать больше</button-primary><a class="menu-item-link" href="">Задать вопрос</a>
+				</footer>
+			</article>
+			<article class="menu-item">
+				<div class="menu-item-gutter"></div>
+				<h2 class="menu-item-title">Застройщикам</h2>
+				<div class="menu-item-icon">
+					<builder-icon width="57" height="58"></builder-icon>
+				</div>
+				<footer class="menu-item-footer">
+					<button-primary tag="a" href="#builder">Хочу знать больше</button-primary><a class="menu-item-link" href="">Задать вопрос</a>
+				</footer>
+			</article>
+			<article class="menu-item">
+				<div class="menu-item-gutter"></div>
+				<h2 class="menu-item-title">Дистрибьюторам</h2>
+				<div class="menu-item-icon">
+					<distribution-icon width="85" height="70"></distribution-icon>
+				</div>
+				<footer class="menu-item-footer">
+					<button-primary tag="a" href="#distribution">Хочу знать больше</button-primary><a class="menu-item-link" href="">Задать вопрос</a>
+				</footer>
+			</article>
+		</div>
+	</base-container>
+</header>
+				</header-page>
+				<section-page inline-template id="agency">
+					<div class="section-page">
+						<base-container>
+							<h2 class="title">Агентствам</h2>
+						</base-container>
+						<base-container>
+							<nav class="tab-bar">
+								<button class="tab-bar-item" :class="{current: currentTab === 1}" @click="currentTab = 1">База новостроек</button>
+								<button class="tab-bar-item" :class="{current: currentTab === 2}" @click="currentTab = 2">Информация и обучение</button>
+								<button class="tab-bar-item" :class="{current: currentTab === 3}" @click="currentTab = 3">???</button>
+								<button class="tab-bar-item" :class="{current: currentTab === 4}" @click="currentTab = 4">CRM</button>
+							</nav>
+						</base-container>
+						<div class="tab-frame">
+							<div class="tab-frame-item" v-if="currentTab === 1" style="background-image: url(img/bg-1.jpg)"><img class="tab-frame-item-img number-1" src="img/imac3.png" alt="">
+								<base-container>
+									<div class="tab-content">
+										<div class="tab-content-body">
+											<h3 class="tab-content-title">База новостроек</h3>
+											<p class="tab-content-desc">Мы даем вам базу новостроек, сервис, и платим вам комиссию</p>
+										</div>
+										<div class="tab-content-actions">
+											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+											<button-link tag="a" href="">Задать вопрос</button-link>
+										</div>
+									</div>
+								</base-container>
+							</div>
+							<div class="tab-frame-item" v-if="currentTab === 2" style="background-image: url(img/bg-2.jpg)"><img class="tab-frame-item-img number-1" src="img/imac3.png" alt="">
+								<base-container>
+									<div class="tab-content">
+										<div class="tab-content-body">
+											<h3 class="tab-content-title">Информация и обучение</h3>
+											<p class="tab-content-desc">Обучение, новости и акции застройщиков – всё в одном приложении</p>
+										</div>
+										<div class="tab-content-actions">
+											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+											<button-link tag="a" href="">Задать вопрос</button-link>
+										</div>
+									</div>
+								</base-container>
+							</div>
+							<div class="tab-frame-item" v-if="currentTab === 3" style="background-image: url(img/bg-3.jpg)"><img class="tab-frame-item-img number-1" src="img/imac3.png" alt="">
+								<base-container>
+									<div class="tab-content">
+										<div class="tab-content-body">
+											<h3 class="tab-content-title">Заголовок</h3>
+											<p class="tab-content-desc">Один договор – доступ к сотням застройщиков</p>
+										</div>
+										<div class="tab-content-actions">
+											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+											<button-link tag="a" href="">Задать вопрос</button-link>
+										</div>
+									</div>
+								</base-container>
+							</div>
+							<div class="tab-frame-item" v-if="currentTab === 4" style="background-image: url(img/bg-4.jpg)"><img class="tab-frame-item-img number-1" src="img/imac3.png" alt="">
+								<base-container>
+									<div class="tab-content">
+										<div class="tab-content-body">
+											<h3 class="tab-content-title">CRM</h3>
+											<p class="tab-content-desc">Все этапы сделки под контролем</p>
+										</div>
+										<div class="tab-content-actions">
+											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+											<button-link tag="a" href="">Задать вопрос</button-link>
+										</div>
+									</div>
+								</base-container>
+							</div>
+						</div>
+					</div>
+				</section-page>
+				<section-page inline-template id="builder">
+					<div class="section-page">
+						<base-container>
+							<h2 class="title">Застройщикам</h2>
+						</base-container>
+						<base-container>
+							<nav class="tab-bar">
+								<button class="tab-bar-item" :class="{current: currentTab === 1}" @click="currentTab = 1">+15 000 Агентств</button>
+								<button class="tab-bar-item" :class="{current: currentTab === 2}" @click="currentTab = 2">Оплата за результат</button>
+								<button class="tab-bar-item" :class="{current: currentTab === 3}" @click="currentTab = 3">Клиенты со всей России</button>
+								<button class="tab-bar-item" :class="{current: currentTab === 4}" @click="currentTab = 4">????</button>
+							</nav>
+						</base-container>
+						<div class="tab-frame">
+							<div class="tab-frame-item" v-if="currentTab === 1" style="background-image: url(img/bg-5.jpg)"><img class="tab-frame-item-img number-2" src="img/droid.png" alt="">
+								<base-container>
+									<div class="tab-content">
+										<div class="tab-content-body">
+											<h3 class="tab-content-title">+15 000 Агентств</h3>
+											<p class="tab-content-desc">Ваши объекты будут продавать тысячи агентов</p>
+										</div>
+										<div class="tab-content-actions">
+											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+											<button-link tag="a" href="">Задать вопрос</button-link>
+										</div>
+									</div>
+								</base-container>
+							</div>
+							<div class="tab-frame-item" v-if="currentTab === 2" style="background-image: url(img/bg-6.jpg)"><img class="tab-frame-item-img number-2" src="img/droid.png" alt="">
+								<base-container>
+									<div class="tab-content">
+										<div class="tab-content-body">
+											<h3 class="tab-content-title">Оплата за результат</h3>
+											<p class="tab-content-desc">Мы приведём к вам клиентов со всей России</p>
+										</div>
+										<div class="tab-content-actions">
+											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+											<button-link tag="a" href="">Задать вопрос</button-link>
+										</div>
+									</div>
+								</base-container>
+							</div>
+							<div class="tab-frame-item" v-if="currentTab === 3" style="background-image: url(img/bg-7.jpg)"><img class="tab-frame-item-img number-2" src="img/droid.png" alt="">
+								<base-container>
+									<div class="tab-content">
+										<div class="tab-content-body">
+											<h3 class="tab-content-title">Клиенты со всей России</h3>
+											<p class="tab-content-desc">Мы приведём к вам клиентов с оплатой за результат</p>
+										</div>
+										<div class="tab-content-actions">
+											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+											<button-link tag="a" href="">Задать вопрос</button-link>
+										</div>
+									</div>
+								</base-container>
+							</div>
+							<div class="tab-frame-item" v-if="currentTab === 4" style="background-image: url(img/bg-8.jpg)"><img class="tab-frame-item-img number-2" src="img/droid.png" alt="">
+								<base-container>
+									<div class="tab-content">
+										<div class="tab-content-body">
+											<h3 class="tab-content-title">1 договор – 1 менеджер</h3>
+											<p class="tab-content-desc">десятки клиентов в месяц</p>
+										</div>
+										<div class="tab-content-actions">
+											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+											<button-link tag="a" href="">Задать вопрос</button-link>
+										</div>
+									</div>
+								</base-container>
+							</div>
+						</div>
+					</div>
+				</section-page>
+				<section-page inline-template id="distribution">
+					<div class="section-page">
+						<base-container>
+							<h2 class="title">Дистрибьюторам</h2>
+						</base-container>
+						<base-container>
+							<nav class="tab-bar">
+								<button class="tab-bar-item" :class="{current: currentTab === 1}" @click="currentTab = 1">1 шаг</button>
+								<button class="tab-bar-item" :class="{current: currentTab === 2}" @click="currentTab = 2">2 шаг</button>
+								<button class="tab-bar-item" :class="{current: currentTab === 3}" @click="currentTab = 3">3 шаг</button>
+								<button class="tab-bar-item" :class="{current: currentTab === 4}" @click="currentTab = 4">4 шаг</button>
+							</nav>
+						</base-container>
+						<div class="tab-frame">
+							<div class="tab-frame-item" v-if="currentTab === 1" style="background-image: url(img/bg-9.jpg)"><img class="tab-frame-item-img number-3" src="img/phone.png" alt="">
+								<base-container>
+									<div class="tab-content">
+										<div class="tab-content-body">
+											<h3 class="tab-content-title">Шаг 1</h3>
+											<p class="tab-content-desc">Возьмите технологии и инструменты бля построения сети продаж новостроек</p>
+										</div>
+										<div class="tab-content-actions">
+											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+											<button-link tag="a" href="">Задать вопрос</button-link>
+										</div>
+									</div>
+								</base-container>
+							</div>
+							<div class="tab-frame-item" v-if="currentTab === 2" style="background-image: url(img/bg-10.jpg)"><img class="tab-frame-item-img number-3" src="img/phone.png" alt="">
+								<base-container>
+									<div class="tab-content">
+										<div class="tab-content-body">
+											<h3 class="tab-content-title">Шаг 2</h3>
+											<p class="tab-content-desc">Постройте эффективную сеть продажи новостроек на базе своего агентства</p>
+										</div>
+										<div class="tab-content-actions">
+											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+											<button-link tag="a" href="">Задать вопрос</button-link>
+										</div>
+									</div>
+								</base-container>
+							</div>
+							<div class="tab-frame-item" v-if="currentTab === 3" style="background-image: url(img/bg-11.jpg)"><img class="tab-frame-item-img number-3" src="img/phone.png" alt="">
+								<base-container>
+									<div class="tab-content">
+										<div class="tab-content-body">
+											<h3 class="tab-content-title">Шаг 3</h3>
+											<p class="tab-content-desc">Дайте доступ к вашему договору всем агентствам своего региона</p>
+										</div>
+										<div class="tab-content-actions">
+											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+											<button-link tag="a" href="">Задать вопрос</button-link>
+										</div>
+									</div>
+								</base-container>
+							</div>
+							<div class="tab-frame-item" v-if="currentTab === 4" style="background-image: url(img/bg-12.jpg)"><img class="tab-frame-item-img number-3" src="img/phone.png" alt="">
+								<base-container>
+									<div class="tab-content">
+										<div class="tab-content-body">
+											<h3 class="tab-content-title">Шаг 4</h3>
+											<p class="tab-content-desc">Станьте системообразующим игроком по новостройкам в своём регионе</p>
+										</div>
+										<div class="tab-content-actions">
+											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+											<button-link tag="a" href="">Задать вопрос</button-link>
+										</div>
+									</div>
+								</base-container>
+							</div>
+						</div>
+					</div>
+				</section-page>
+				<section class="page-index-section">
+					<base-container>
+						<base-content>
+							<p>
+								Изменение глобальной стратегии переворачивает рейтинг.
+								Поведенческий таргетинг тормозит институциональный анализ рыночных цен.
+								Программа лояльности, в рамках сегодняшних воззрений, отталкивает сублимированный диктат потребителя,
+								работая над проектом. Промоакция, не меняя концепции, изложенной выше, масштабирует формирование имиджа.
+								Партисипативное планирование транслирует повседневный имидж предприятия.
+								Промоакция искажает стиль менеджмента.
+								
+							</p>
+							<p>
+								По мнению ведущих маркетологов, PR продуцирует продвигаемый формирование имиджа.
+								Создание приверженного покупателя без оглядки на авторитеты тормозит креатив.
+								Портрет потребителя, не меняя концепции, изложенной выше, экономит маркетинг.
+								Программа лояльности существенно притягивает популярный опрос.
+								Взаимодействие корпорации и клиента тормозит сублимированный медийный канал.
+								Промоакция, на первый взгляд, индуцирует из ряда вон выходящий рейтинг, повышая конкуренцию.
+								
+							</p>
+						</base-content>
+					</base-container>
+				</section>
+				<footer-page inline-template>
+<footer class="footer-page">
+	<div class="row">
+		<div class="col left"><img class="logo" src="img/metris-black.png" alt="Metris"></div>
+		<div class="col center">
+			<div class="content">
+				<p>Сообщество профессионалов недвижимости</p>
+			</div>
+		</div>
+		<div class="col right">
+			<div class="content text-right"><a href="">Обратная связь</a></div>
+		</div>
+	</div>
+</footer>
+				</footer-page>
+			</template>
+		</base-page>
+	<script type="module" src="/js/chunk-vendors.f273eff7.js"></script><script type="module" src="/js/index.e0576951.js"></script><script>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()},!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script><script type="text/javascript" src="/js/chunk-vendors-legacy.f273eff7.js" nomodule></script><script type="text/javascript" src="/js/index-legacy.30519c69.js" nomodule></script></body>
+</html>

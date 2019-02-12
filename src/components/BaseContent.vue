@@ -32,6 +32,10 @@
 		--base-content-heading-4_-_font-size: #{rem(32)};
 		--base-content-heading-5_-_font-size: #{rem(24)};
 		--base-content-heading-6_-_font-size: #{rem(16)};
+
+		@media (width < env(--vw-md)) {
+			--base-content_-_font-size: #{rem(14)};
+		}
 	}
 
 	@custom-selector :--headings

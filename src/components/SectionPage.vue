@@ -100,7 +100,7 @@
 		position: absolute;
 
 		&.number-1 {
-			right: xl-to-xs(84, 42);
+			right: xl-to-xs(84, 22);
 			bottom: xl-to-xs(-33, -17);
 			width: xl-to-xs(495, 277);
 			min-width: 277px;
@@ -108,11 +108,19 @@
 		}
 
 		&.number-2 {
-			right: xl-to-xs(92, 38);
+			right: xl-to-xs(92, 18);
 			bottom: 0;
 			width: xl-to-xs(553, 310);
 			min-width: 310px;
 			max-width: 553px;
+		}
+
+		&.number-3 {
+			right: xl-to-xs(94, 25);
+			bottom: 0;
+			width: xl-to-xs(466, 263);
+			min-width: 263px;
+			max-width: 466px;
 		}
 	}
 
