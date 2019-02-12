@@ -75,7 +75,7 @@
 	.tab-frame {
 		position: relative;
 		margin-top: -6px;
-		background-color: #000000;
+		background: linear-gradient(-24deg, #5a3081 0%, #81306e 100%);
 
 		&:before {
 			content: '';
