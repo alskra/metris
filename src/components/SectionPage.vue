@@ -34,6 +34,11 @@
 		font-size: xl-to-xs(50, 35);
 		font-weight: 800;
 		line-height: 1.25;
+		hyphens: none;
+
+		@media (width < env(--vw-sm)) {
+			hyphens: manual;
+		}
 	}
 
 	.tab-bar {
@@ -139,7 +144,7 @@
 		margin-right: 30%;
 		padding: xl-to-xs(80, 30) 0;
 
-		@media (width < env(--vw-xl)) {
+		@media (width <= env(--vw-xl)) {
 			padding-bottom: xl-to-xs(80, 315);
 		}
 
