@@ -1,344 +1,430 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<title>Metris — сообщество профессионалов недвижимости</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
-		<base href="/">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-<link rel="manifest" href="/favicon/site.webmanifest">
-<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#60b646">
-<link rel="shortcut icon" href="/favicon/favicon.ico">
-<meta name="msapplication-TileColor" content="#81306e">
-<meta name="msapplication-config" content="/favicon/browserconfig.xml">
-<meta name="theme-color" content="#ffffff">
-		<style>
-			[inline-template] {
+
+<head>
+	<title>Metris — сообщество профессионалов недвижимости</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
+	<base href="/">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#60b646">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#81306e">
+	<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<style>
+		[inline-template] {
 				display: none;
 			}
 			
 		</style>
-	<link href="/css/chunk-vendors.45c76c48.css" rel="preload" as="style"><link href="/css/index.d45c9744.css" rel="preload" as="style"><link href="/js/chunk-vendors.f273eff7.js" rel="modulepreload" as="script"><link href="/js/index.2e3bd41b.js" rel="modulepreload" as="script"><link href="/css/chunk-vendors.45c76c48.css" rel="stylesheet"><link href="/css/index.d45c9744.css" rel="stylesheet"></head>
-	<body>
-		<noscript><strong>We're sorry but this app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript>
-		<base-page class="page-index">
-			<template>
-				<header-page inline-template>
-<header class="header-page">
-	<base-container class="top"><a class="logo" href="/" title="Metris"><img class="logo-img" src="img/metris.png" alt="Metris"></a></base-container>
-	<base-container class="middle">
-		<h1 class="title">Федера&shy;ль&shy;ный портал недвижи&shy;мос&shy;ти для профессио&shy;на&shy;лов</h1>
-	</base-container>
-	<base-container class="bottom">
-		<div class="menu">
-			<article class="menu-item">
-				<div class="menu-item-gutter"></div>
-				<h2 class="menu-item-title">Агентствам</h2>
-				<div class="menu-item-icon">
-					<agency-icon width="64" height="64"></agency-icon>
-				</div>
-				<footer class="menu-item-footer">
-					<button-primary tag="a" href="#agency">Хочу знать больше</button-primary><a class="menu-item-link" href="">Задать вопрос</a>
-				</footer>
-			</article>
-			<article class="menu-item">
-				<div class="menu-item-gutter"></div>
-				<h2 class="menu-item-title">Застройщикам</h2>
-				<div class="menu-item-icon">
-					<builder-icon width="57" height="58"></builder-icon>
-				</div>
-				<footer class="menu-item-footer">
-					<button-primary tag="a" href="#builder">Хочу знать больше</button-primary><a class="menu-item-link" href="">Задать вопрос</a>
-				</footer>
-			</article>
-			<article class="menu-item">
-				<div class="menu-item-gutter"></div>
-				<h2 class="menu-item-title">Дистрибьюторам</h2>
-				<div class="menu-item-icon">
-					<distribution-icon width="85" height="70"></distribution-icon>
-				</div>
-				<footer class="menu-item-footer">
-					<button-primary tag="a" href="#distribution">Хочу знать больше</button-primary><a class="menu-item-link" href="">Задать вопрос</a>
-				</footer>
-			</article>
-		</div>
-	</base-container>
-</header>
-				</header-page>
-				<section-page inline-template id="agency">
-					<div class="section-page">
-						<base-container>
-							<h2 class="title">Агентствам</h2>
-						</base-container>
-						<base-container>
-							<nav class="tab-bar">
-								<div class="tab-bar-scroll">
-									<button class="tab-bar-item" :class="{current: currentTab === 1}" @click="currentTab = 1">База новостроек</button>
-									<button class="tab-bar-item" :class="{current: currentTab === 2}" @click="currentTab = 2">Информация и обучение</button>
-									<button class="tab-bar-item" :class="{current: currentTab === 3}" @click="currentTab = 3">???</button>
-									<button class="tab-bar-item" :class="{current: currentTab === 4}" @click="currentTab = 4">CRM</button>
-								</div>
-							</nav>
-						</base-container>
-						<div class="tab-frame">
-							<div class="tab-frame-item" v-show="currentTab === 1" style="background-image: url(img/bg-1.jpg)"><img class="tab-frame-item-img number-1" src="img/imac3.png" alt="">
-								<base-container>
-									<div class="tab-content">
-										<div class="tab-content-body">
-											<h3 class="tab-content-title">База новостроек</h3>
-											<p class="tab-content-desc">Мы даем вам базу новостроек, сервис, и платим вам комиссию</p>
-										</div>
-										<div class="tab-content-actions">
-											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
-											<button-link tag="a" href="">Задать вопрос</button-link>
-										</div>
-									</div>
-								</base-container>
-							</div>
-							<div class="tab-frame-item" v-show="currentTab === 2" style="background-image: url(img/bg-2.jpg)"><img class="tab-frame-item-img number-1" src="img/imac3.png" alt="">
-								<base-container>
-									<div class="tab-content">
-										<div class="tab-content-body">
-											<h3 class="tab-content-title">Информация и обучение</h3>
-											<p class="tab-content-desc">Обучение, новости и акции застройщиков – всё в одном приложении</p>
-										</div>
-										<div class="tab-content-actions">
-											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
-											<button-link tag="a" href="">Задать вопрос</button-link>
-										</div>
-									</div>
-								</base-container>
-							</div>
-							<div class="tab-frame-item" v-show="currentTab === 3" style="background-image: url(img/bg-3.jpg)"><img class="tab-frame-item-img number-1" src="img/imac3.png" alt="">
-								<base-container>
-									<div class="tab-content">
-										<div class="tab-content-body">
-											<h3 class="tab-content-title">Заголовок</h3>
-											<p class="tab-content-desc">Один договор – доступ к сотням застройщиков</p>
-										</div>
-										<div class="tab-content-actions">
-											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
-											<button-link tag="a" href="">Задать вопрос</button-link>
-										</div>
-									</div>
-								</base-container>
-							</div>
-							<div class="tab-frame-item" v-show="currentTab === 4" style="background-image: url(img/bg-4.jpg)"><img class="tab-frame-item-img number-1" src="img/imac3.png" alt="">
-								<base-container>
-									<div class="tab-content">
-										<div class="tab-content-body">
-											<h3 class="tab-content-title">CRM</h3>
-											<p class="tab-content-desc">Все этапы сделки под контролем</p>
-										</div>
-										<div class="tab-content-actions">
-											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
-											<button-link tag="a" href="">Задать вопрос</button-link>
-										</div>
-									</div>
-								</base-container>
-							</div>
-						</div>
-					</div>
-				</section-page>
-				<section-page inline-template id="builder">
-					<div class="section-page">
-						<base-container>
-							<h2 class="title">Застройщикам</h2>
-						</base-container>
-						<base-container>
-							<nav class="tab-bar">
-								<div class="tab-bar-scroll">
-									<button class="tab-bar-item" :class="{current: currentTab === 1}" @click="currentTab = 1">+15 000 Агентств</button>
-									<button class="tab-bar-item" :class="{current: currentTab === 2}" @click="currentTab = 2">Оплата за результат</button>
-									<button class="tab-bar-item" :class="{current: currentTab === 3}" @click="currentTab = 3">Клиенты со всей России</button>
-									<button class="tab-bar-item" :class="{current: currentTab === 4}" @click="currentTab = 4">????</button>
-								</div>
-							</nav>
-						</base-container>
-						<div class="tab-frame">
-							<div class="tab-frame-item" v-show="currentTab === 1" style="background-image: url(img/bg-5.jpg)"><img class="tab-frame-item-img number-2" src="img/droid.png" alt="">
-								<base-container>
-									<div class="tab-content">
-										<div class="tab-content-body">
-											<h3 class="tab-content-title">+15 000 Агентств</h3>
-											<p class="tab-content-desc">Ваши объекты будут продавать тысячи агентов</p>
-										</div>
-										<div class="tab-content-actions">
-											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
-											<button-link tag="a" href="">Задать вопрос</button-link>
-										</div>
-									</div>
-								</base-container>
-							</div>
-							<div class="tab-frame-item" v-show="currentTab === 2" style="background-image: url(img/bg-6.jpg)"><img class="tab-frame-item-img number-2" src="img/droid.png" alt="">
-								<base-container>
-									<div class="tab-content">
-										<div class="tab-content-body">
-											<h3 class="tab-content-title">Оплата за результат</h3>
-											<p class="tab-content-desc">Мы приведём к вам клиентов со всей России</p>
-										</div>
-										<div class="tab-content-actions">
-											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
-											<button-link tag="a" href="">Задать вопрос</button-link>
-										</div>
-									</div>
-								</base-container>
-							</div>
-							<div class="tab-frame-item" v-show="currentTab === 3" style="background-image: url(img/bg-7.jpg)"><img class="tab-frame-item-img number-2" src="img/droid.png" alt="">
-								<base-container>
-									<div class="tab-content">
-										<div class="tab-content-body">
-											<h3 class="tab-content-title">Клиенты со всей России</h3>
-											<p class="tab-content-desc">Мы приведём к вам клиентов с оплатой за результат</p>
-										</div>
-										<div class="tab-content-actions">
-											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
-											<button-link tag="a" href="">Задать вопрос</button-link>
-										</div>
-									</div>
-								</base-container>
-							</div>
-							<div class="tab-frame-item" v-show="currentTab === 4" style="background-image: url(img/bg-8.jpg)"><img class="tab-frame-item-img number-2" src="img/droid.png" alt="">
-								<base-container>
-									<div class="tab-content">
-										<div class="tab-content-body">
-											<h3 class="tab-content-title">1 договор – 1 менеджер</h3>
-											<p class="tab-content-desc">десятки клиентов в месяц</p>
-										</div>
-										<div class="tab-content-actions">
-											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
-											<button-link tag="a" href="">Задать вопрос</button-link>
-										</div>
-									</div>
-								</base-container>
-							</div>
-						</div>
-					</div>
-				</section-page>
-				<section-page inline-template id="distribution">
-					<div class="section-page">
-						<base-container>
-							<h2 class="title">Дистрибьюторам</h2>
-						</base-container>
-						<base-container>
-							<nav class="tab-bar">
-								<div class="tab-bar-scroll">
-									<button class="tab-bar-item" :class="{current: currentTab === 1}" @click="currentTab = 1">1 шаг</button>
-									<button class="tab-bar-item" :class="{current: currentTab === 2}" @click="currentTab = 2">2 шаг</button>
-									<button class="tab-bar-item" :class="{current: currentTab === 3}" @click="currentTab = 3">3 шаг</button>
-									<button class="tab-bar-item" :class="{current: currentTab === 4}" @click="currentTab = 4">4 шаг</button>
-								</div>
-							</nav>
-						</base-container>
-						<div class="tab-frame">
-							<div class="tab-frame-item" v-show="currentTab === 1" style="background-image: url(img/bg-9.jpg)"><img class="tab-frame-item-img number-3" src="img/phone.png" alt="">
-								<base-container>
-									<div class="tab-content">
-										<div class="tab-content-body">
-											<h3 class="tab-content-title">Шаг 1</h3>
-											<p class="tab-content-desc">Возьмите технологии и инструменты бля построения сети продаж новостроек</p>
-										</div>
-										<div class="tab-content-actions">
-											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
-											<button-link tag="a" href="">Задать вопрос</button-link>
-										</div>
-									</div>
-								</base-container>
-							</div>
-							<div class="tab-frame-item" v-show="currentTab === 2" style="background-image: url(img/bg-10.jpg)"><img class="tab-frame-item-img number-3" src="img/phone.png" alt="">
-								<base-container>
-									<div class="tab-content">
-										<div class="tab-content-body">
-											<h3 class="tab-content-title">Шаг 2</h3>
-											<p class="tab-content-desc">Постройте эффективную сеть продажи новостроек на базе своего агентства</p>
-										</div>
-										<div class="tab-content-actions">
-											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
-											<button-link tag="a" href="">Задать вопрос</button-link>
-										</div>
-									</div>
-								</base-container>
-							</div>
-							<div class="tab-frame-item" v-show="currentTab === 3" style="background-image: url(img/bg-11.jpg)"><img class="tab-frame-item-img number-3" src="img/phone.png" alt="">
-								<base-container>
-									<div class="tab-content">
-										<div class="tab-content-body">
-											<h3 class="tab-content-title">Шаг 3</h3>
-											<p class="tab-content-desc">Дайте доступ к вашему договору всем агентствам своего региона</p>
-										</div>
-										<div class="tab-content-actions">
-											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
-											<button-link tag="a" href="">Задать вопрос</button-link>
-										</div>
-									</div>
-								</base-container>
-							</div>
-							<div class="tab-frame-item" v-show="currentTab === 4" style="background-image: url(img/bg-12.jpg)"><img class="tab-frame-item-img number-3" src="img/phone.png" alt="">
-								<base-container>
-									<div class="tab-content">
-										<div class="tab-content-body">
-											<h3 class="tab-content-title">Шаг 4</h3>
-											<p class="tab-content-desc">Станьте системообразующим игроком по новостройкам в своём регионе</p>
-										</div>
-										<div class="tab-content-actions">
-											<button-primary tag="a" href="">Зарегистрироваться</button-primary>
-											<button-link tag="a" href="">Задать вопрос</button-link>
-										</div>
-									</div>
-								</base-container>
-							</div>
-						</div>
-					</div>
-				</section-page>
-				<section class="page-index-section">
-					<base-container>
-						<base-content>
-							<p>
-								Изменение глобальной стратегии переворачивает рейтинг.
-								Поведенческий таргетинг тормозит институциональный анализ рыночных цен.
-								Программа лояльности, в рамках сегодняшних воззрений, отталкивает сублимированный диктат потребителя,
-								работая над проектом. Промоакция, не меняя концепции, изложенной выше, масштабирует формирование имиджа.
-								Партисипативное планирование транслирует повседневный имидж предприятия.
-								Промоакция искажает стиль менеджмента.
-								
-							</p>
-							<p>
-								По мнению ведущих маркетологов, PR продуцирует продвигаемый формирование имиджа.
-								Создание приверженного покупателя без оглядки на авторитеты тормозит креатив.
-								Портрет потребителя, не меняя концепции, изложенной выше, экономит маркетинг.
-								Программа лояльности существенно притягивает популярный опрос.
-								Взаимодействие корпорации и клиента тормозит сублимированный медийный канал.
-								Промоакция, на первый взгляд, индуцирует из ряда вон выходящий рейтинг, повышая конкуренцию.
-								
-							</p>
-						</base-content>
+	<link href="/css/chunk-vendors.45c76c48.css" rel="preload" as="style">
+	<link href="/css/index.784f7230.css" rel="preload" as="style">
+	<link href="/js/chunk-vendors.e7cadaea.js" rel="modulepreload" as="script">
+	<link href="/js/index.d9ac5cb2.js" rel="modulepreload" as="script">
+	<link href="/css/chunk-vendors.45c76c48.css" rel="stylesheet">
+	<link href="/css/index.784f7230.css" rel="stylesheet">
+</head>
+
+<body>
+	<noscript><strong>We're sorry but this app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript>
+	<base-page class="page-index">
+		<template>
+			<header-page inline-template>
+				<header class="header-page">
+					<base-container class="top"><a class="logo" href="/" title="Metris"><img class="logo-img" src="img/metris.png" alt="Metris"></a></base-container>
+					<base-container class="middle">
+						<h1 class="title">Федера&shy;ль&shy;ный портал недвижи&shy;мос&shy;ти для профессио&shy;на&shy;лов</h1>
 					</base-container>
+					<base-container class="bottom">
+						<div class="menu">
+							<article class="menu-item">
+								<div class="menu-item-gutter"></div><strong class="menu-item-title">Агентствам</strong>
+								<div class="menu-item-icon">
+									<agency-icon width="64" height="64"></agency-icon>
+								</div>
+								<footer class="menu-item-footer">
+									<button-primary tag="a" href="#agency">Хочу знать больше</button-primary><a class="menu-item-link" href="">Задать вопрос</a>
+								</footer>
+							</article>
+							<article class="menu-item">
+								<div class="menu-item-gutter"></div><strong class="menu-item-title">Застройщикам</strong>
+								<div class="menu-item-icon">
+									<builder-icon width="57" height="58"></builder-icon>
+								</div>
+								<footer class="menu-item-footer">
+									<button-primary tag="a" href="#builder">Хочу знать больше</button-primary><a class="menu-item-link" href="">Задать вопрос</a>
+								</footer>
+							</article>
+							<article class="menu-item">
+								<div class="menu-item-gutter"></div><strong class="menu-item-title">Дистрибьюторам</strong>
+								<div class="menu-item-icon">
+									<distribution-icon width="85" height="70"></distribution-icon>
+								</div>
+								<footer class="menu-item-footer">
+									<button-primary tag="a" href="#distribution">Хочу знать больше</button-primary><a class="menu-item-link" href="">Задать вопрос</a>
+								</footer>
+							</article>
+						</div>
+					</base-container>
+				</header>
+			</header-page>
+			<section-page inline-template id="agency">
+				<section class="section-page">
+					<base-container>
+						<h2 class="title">Агентствам</h2>
+					</base-container>
+					<base-container>
+						<nav class="tab-bar">
+							<div class="tab-bar-scroll">
+								<button class="tab-bar-item" :class="{current: currentTab === 1}" @click="currentTab = 1">База новостроек</button>
+								<button class="tab-bar-item" :class="{current: currentTab === 2}" @click="currentTab = 2">Обучение и мероприятия</button>
+								<button class="tab-bar-item" :class="{current: currentTab === 3}" @click="currentTab = 3">Бронирование онлайн</button>
+								<button class="tab-bar-item" :class="{current: currentTab === 4}" @click="currentTab = 4">Межрегиональные сделки</button>
+							</div>
+						</nav>
+					</base-container>
+					<div class="tab-frame">
+						<div class="tab-frame-item" v-show="currentTab === 1" style="background-image: url(img/bg-1.jpg)"><img class="tab-frame-item-img number-1" src="img/imac3.png" alt="">
+							<base-container>
+								<div class="tab-content">
+									<div class="tab-content-body">
+										<dl>
+											<dt>Расширьте свой листинг объектов</dt>
+											<dd>Добавьте к ассортименту своих объектов все лучшие новостройки города</dd>
+											<dt>Подбирайте квартиры для клиентов</dt>
+											<dd>Задавайте параметры. Используйте фильтры. Удивляйте ассортиментом и качеством поиска</dd>
+											<dt>Делайте качественные презентации своим клиентам</dt>
+											<dd>Отправляйте презентации клиентам прямо из Метрис</dd>
+										</dl>
+									</div>
+									<div class="tab-content-actions">
+										<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+										<button-link tag="a" href="">Задать вопрос</button-link>
+									</div>
+								</div>
+							</base-container>
+						</div>
+						<div class="tab-frame-item" v-show="currentTab === 2" style="background-image: url(img/bg-2.jpg)"><img class="tab-frame-item-img number-1" src="img/imac3.png" alt="">
+							<base-container>
+								<div class="tab-content">
+									<div class="tab-content-body">
+										<dl>
+											<dt>Участвуйте в мероприятиях дистрибьютора и застройщиков</dt>
+											<dd>В системе metris.pro вы всегда будете в курсе профессиональных событий. Записывайтесь на мероприятия прямо из системы</dd>
+											<dt>Следите за актуальными новостями и акциями от застройщиков</dt>
+											<dd>В Метрис собран уникальный качественный набор профессиональных новостей: акции, юридическая, правовая, рекламная информация по всем новостройкам</dd>
+										</dl>
+									</div>
+									<div class="tab-content-actions">
+										<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+										<button-link tag="a" href="">Задать вопрос</button-link>
+									</div>
+								</div>
+							</base-container>
+						</div>
+						<div class="tab-frame-item" v-show="currentTab === 3" style="background-image: url(img/bg-3.jpg)"><img class="tab-frame-item-img number-1" src="img/imac3.png" alt="">
+							<base-container>
+								<div class="tab-content">
+									<div class="tab-content-body">
+										<dl>
+											<dt>Бронируйте квартиры ON-LINE</dt>
+											<dd>Бронируйте квартиры в Метрис. Используйте фиксацию клиента у застройщика, запись на показы, бронирование и запись на договор. Обо всех событиях по сделке Метрис вовремя оповестит</dd>
+											<dt>Отслеживайте состояние всех ваших сделок</dt>
+											<dd>Отслеживайте все действия от обращения клиента до получения комиссии. Все документы, подтверждающие взаимоотношения с клиентом, формируются и хранятся в Метрис</dd>
+										</dl>
+									</div>
+									<div class="tab-content-actions">
+										<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+										<button-link tag="a" href="">Задать вопрос</button-link>
+									</div>
+								</div>
+							</base-container>
+						</div>
+						<div class="tab-frame-item" v-show="currentTab === 4" style="background-image: url(img/bg-4.jpg)"><img class="tab-frame-item-img number-1" src="img/imac3.png" alt="">
+							<base-container>
+								<div class="tab-content">
+									<div class="tab-content-body">
+										<dl>
+											<dt>Подключайтесь к любому интересному для вас региону</dt>
+											<dd>Предлагайте своим клиентам новостройки центров притяжения клиентов в самых привлекательных городах России</dd>
+											<dt>Всё под контролем</dt>
+											<dd>Передавайте клиента через систему и отслеживайте прохождение всех этапов сделки в личном кабинете. Получайте высокую комиссию</dd>
+										</dl>
+									</div>
+									<div class="tab-content-actions">
+										<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+										<button-link tag="a" href="">Задать вопрос</button-link>
+									</div>
+								</div>
+							</base-container>
+						</div>
+					</div>
 				</section>
-				<footer-page inline-template>
-<footer class="footer-page">
-	<div class="row">
-		<div class="col left"><img class="logo" src="img/metris-black.png" alt="Metris"></div>
-		<div class="col center">
-			<div class="content">
-				<p>Сообщество профессионалов недвижимости</p>
-			</div>
-		</div>
-		<div class="col right">
-			<div class="content text-right">
-				<p><a href="">Обратная связь</a></p>
-			</div>
-		</div>
-		<div class="col center">
-			<div class="content">
-				<p><a href="https://gvate.ru/sozdanie-saytov/landing-page/" target="_blank">Разработка Лэндингов</a>&nbsp;&mdash;&#32;<span class="developer">Gvate Agency</span></p>
-			</div>
-		</div>
-	</div>
-</footer>
-				</footer-page>
-			</template>
-		</base-page>
-	<script type="module" src="/js/chunk-vendors.f273eff7.js"></script><script type="module" src="/js/index.2e3bd41b.js"></script><script>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()},!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script><script type="text/javascript" src="/js/chunk-vendors-legacy.f273eff7.js" nomodule></script><script type="text/javascript" src="/js/index-legacy.a4ef1cdc.js" nomodule></script></body>
+			</section-page>
+			<section-page inline-template id="builder">
+				<section class="section-page">
+					<base-container>
+						<h2 class="title">Застройщикам</h2>
+					</base-container>
+					<base-container>
+						<nav class="tab-bar">
+							<div class="tab-bar-scroll">
+								<button class="tab-bar-item" :class="{current: currentTab === 1}" @click="currentTab = 1">Эффективные агентские продажи</button>
+								<button class="tab-bar-item" :class="{current: currentTab === 2}" @click="currentTab = 2">Оплата за результат</button>
+								<button class="tab-bar-item" :class="{current: currentTab === 3}" @click="currentTab = 3">Клиенты со всей России</button>
+								<button class="tab-bar-item" :class="{current: currentTab === 4}" @click="currentTab = 4">Портал для партнёров</button>
+							</div>
+						</nav>
+					</base-container>
+					<div class="tab-frame">
+						<div class="tab-frame-item" v-show="currentTab === 1" style="background-image: url(img/bg-5.jpg)"><img class="tab-frame-item-img number-2" src="img/droid.png" alt="">
+							<base-container>
+								<div class="tab-content">
+									<div class="tab-content-body">
+										<dl>
+											<dt>Постройте канал взаимодействия с агентствами</dt>
+											<dd>Метрис позволяет быстро и с малыми затратами времени взаимодействовать с большим количеством агентств</dd>
+											<dt>Увеличивайте продажи с помощью агентств</dt>
+											<dd>Пул агентств-партнёров Метрис во всех регионах постоянно растёт. Получите сделки за счет качественной организации канала агентских продаж дистрибьюторами системы</dd>
+										</dl>
+									</div>
+									<div class="tab-content-actions">
+										<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+										<button-link tag="a" href="">Задать вопрос</button-link>
+									</div>
+								</div>
+							</base-container>
+						</div>
+						<div class="tab-frame-item" v-show="currentTab === 2" style="background-image: url(img/bg-6.jpg)"><img class="tab-frame-item-img number-2" src="img/droid.png" alt="">
+							<base-container>
+								<div class="tab-content">
+									<div class="tab-content-body">
+										<dl>
+											<dt>Удвойте продажи</dt>
+											<dd>Сегодня до 50 % новостроек может реализовываться с помощью агентств. У агентств - клиенты, которые сомневаются в своём выборе. Дайте агентствам мотивацию привести их к вам</dd>
+											<dt>Сначала - сделка, потом - оплата</dt>
+											<dd>
+												Агентства приводят к вам новых клиентов. Клиенты приносят вам деньги.<br> Вы платите комиссию только за состоявшуюся сделку</dd>
+										</dl>
+									</div>
+									<div class="tab-content-actions">
+										<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+										<button-link tag="a" href="">Задать вопрос</button-link>
+									</div>
+								</div>
+							</base-container>
+						</div>
+						<div class="tab-frame-item" v-show="currentTab === 3" style="background-image: url(img/bg-7.jpg)"><img class="tab-frame-item-img number-2" src="img/droid.png" alt="">
+							<base-container>
+								<div class="tab-content">
+									<div class="tab-content-body">
+										<dl>
+											<dt>Охват клиентов - вся Россия</dt>
+											<dd>
+												Ваши объекты увидят агенты всей России и покажут их своим клиентам.<br> Дистрибьютор встретит клиента и проведёт сделку надёжно и профессионально</dd>
+											<dt>Технологии сокращают расстояния</dt>
+											<dd>Наличие портала и бизнес-процессов позволяет проконсультировать клиента и передать его из любого города России</dd>
+										</dl>
+									</div>
+									<div class="tab-content-actions">
+										<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+										<button-link tag="a" href="">Задать вопрос</button-link>
+									</div>
+								</div>
+							</base-container>
+						</div>
+						<div class="tab-frame-item" v-show="currentTab === 4" style="background-image: url(img/bg-8.jpg)"><img class="tab-frame-item-img number-2" src="img/droid.png" alt="">
+							<base-container>
+								<div class="tab-content">
+									<div class="tab-content-body">
+										<dl>
+											<dt>Покажите свои квартиры всему агентскому сообществу</dt>
+											<dd>Загружайте и обновляйте фиды с квартирографией ваших ЖК в Метрис. Процесс максимально автоматизирован</dd>
+											<dt>Получайте брони ON-LINE</dt>
+											<dd>Управляйте заявками на фиксацию клиентов, заявками на показы квартир, постановкой на бронь и записью клиентов на договор. Вся информация придёт в вашу систему прямо из Метрис</dd>
+											<dt>Расскажите о своих новостях и акциях</dt>
+											<dd>Расскажите большой аудитории профессионалов рынка недвижимости о своих объектах, публикуйте акции и новости в Метрис</dd>
+										</dl>
+									</div>
+									<div class="tab-content-actions">
+										<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+										<button-link tag="a" href="">Задать вопрос</button-link>
+									</div>
+								</div>
+							</base-container>
+						</div>
+					</div>
+				</section>
+			</section-page>
+			<section-page inline-template id="distribution">
+				<section class="section-page">
+					<base-container>
+						<h2 class="title">Стать Дистрибьютором</h2>
+					</base-container>
+					<base-container>
+						<nav class="tab-bar">
+							<div class="tab-bar-scroll">
+								<button class="tab-bar-item" :class="{current: currentTab === 1}" @click="currentTab = 1">Кого мы приглашаем</button>
+								<button class="tab-bar-item" :class="{current: currentTab === 2}" @click="currentTab = 2">Внедрите систему</button>
+								<button class="tab-bar-item" :class="{current: currentTab === 3}" @click="currentTab = 3">Постройте систему продажи новостроек</button>
+								<button class="tab-bar-item" :class="{current: currentTab === 4}" @click="currentTab = 4">Подключите всех застройщиков</button>
+							</div>
+						</nav>
+					</base-container>
+					<div class="tab-frame">
+						<div class="tab-frame-item" v-show="currentTab === 1" style="background-image: url(img/bg-9.jpg)"><img class="tab-frame-item-img number-3" src="img/phone.png" alt="">
+							<base-container>
+								<div class="tab-content">
+									<div class="tab-content-body">
+										<dl>
+											<dt>Если в вашем городе ещё нет дистрибьютора Метрис</dt>
+											<dd>Стать дистрибьютором может крупное агентство, обладающее опытом успешной реализации новостроек</dd>
+											<dt>Хотите системно влиять на установление цивилизованных правил игры?</dt>
+											<dd>Если у вашего агентства есть амбиции стать первым номером в регионе по новостройкам и сохранить лидерство надолго - воспользуйтесь нашими лучшими инструментами</dd>
+										</dl>
+									</div>
+									<div class="tab-content-actions">
+										<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+										<button-link tag="a" href="">Задать вопрос</button-link>
+									</div>
+								</div>
+							</base-container>
+						</div>
+						<div class="tab-frame-item" v-show="currentTab === 2" style="background-image: url(img/bg-10.jpg)"><img class="tab-frame-item-img number-3" src="img/phone.png" alt="">
+							<base-container>
+								<div class="tab-content">
+									<div class="tab-content-body">
+										<dl>
+											<dt>Внедрите систему</dt>
+											<dt>Сформируйте команду</dt>
+											<dt>Пройдите обучение в Санкт-Петербурге</dt>
+											<dt>Наполните базу</dt>
+											<dt>Предоставляйте сервис Метрис агентствам и застройщикам и зарабатывайте</dt>
+										</dl>
+									</div>
+									<div class="tab-content-actions">
+										<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+										<button-link tag="a" href="">Задать вопрос</button-link>
+									</div>
+								</div>
+							</base-container>
+						</div>
+						<div class="tab-frame-item" v-show="currentTab === 3" style="background-image: url(img/bg-11.jpg)"><img class="tab-frame-item-img number-3" src="img/phone.png" alt="">
+							<base-container>
+								<div class="tab-content">
+									<div class="tab-content-body">
+										<dl>
+											<dt>Создавайте уникальную среду агентских продаж и управляйте ей</dt>
+											<dd>Формируйте и управляйте сетью агентских продаж по всем застройщикам, присутствующим в вашем регионе. Метрис учитывает все особенности построения такой сети и основывается на многолетнем опыте внедрения</dd>
+											<dt>С нами — лучшие</dt>
+											<dd>Крупнейшие агентства недвижимости используют Метрис в своем бизнесе. Все бизнес-процессы, связанные с цепочкой агентских продаж, в нашей системе автоматизированы</dd>
+										</dl>
+									</div>
+									<div class="tab-content-actions">
+										<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+										<button-link tag="a" href="">Задать вопрос</button-link>
+									</div>
+								</div>
+							</base-container>
+						</div>
+						<div class="tab-frame-item" v-show="currentTab === 4" style="background-image: url(img/bg-12.jpg)"><img class="tab-frame-item-img number-3" src="img/phone.png" alt="">
+							<base-container>
+								<div class="tab-content">
+									<div class="tab-content-body">
+										<dl>
+											<dt>Ретранслируйте в систему новости, акции, формируйте качественную квартирографию застройщиков</dt>
+											<dd>Сделайте портал Метрис главным источником проверенной информации для профессионалов</dd>
+											<dt>Настройте поток качественных сделок между агентствами недвижимости и застройщикам</dt>
+											<dd>Становитесь главным экспертом в сегменте агентских продаж. Формируйте качественный пул сделок между агентствами и застройщиками. Получайте удовольствие от проделанной работы</dd>
+										</dl>
+									</div>
+									<div class="tab-content-actions">
+										<button-primary tag="a" href="">Зарегистрироваться</button-primary>
+										<button-link tag="a" href="">Задать вопрос</button-link>
+									</div>
+								</div>
+							</base-container>
+						</div>
+					</div>
+				</section>
+			</section-page>
+			<section class="page-index-section">
+				<base-container>
+					<base-content>
+						<p>
+							Как появился Метрис? Представьте. Вы - крупное агентство недвижимости.
+							Вы имеете сильные позиции почти во всех сегментах: вторичное жильё, аренда,
+							коммерческая недвижимость. А новостройки, по какой-то причине, остаются одним из побочных
+							сегментов. Да, сделки есть, но агенты не особо любят продавать новостройки. Нет уверенности,
+							что клиент не уйдёт в отдел продаж застройщика. Нет уверенности, что получишь комиссию.
+							В конце концов, вознаграждение тоже не радует – на вторичке больше… Вот и получается,
+							что клиенты, может, и купили бы новостройку – а агенты не особо хотя продавать.
+							Нет продаж – нет квалификации – не потока клиентов – круг замкнулся.
+
+						</p>
+						<p>
+							Но давайте помечтаем.
+							Был бы у меня отдел, который занимается новостройками профессионально.
+							Заключает договоры с застройщиками на выгодных условиях… Обучает агентов работать с
+							новостройками… Ведёт базы остатков, маркетинговых материалов, регламентов…
+							Помогает на сделках… Мы бы давали застройщиками приличные объёмы – а взамен получали бы
+							уважительное отношение и достойное вознаграждение. Заманчиво? А теперь спустим вас с небес
+							на землю. Это – возможно! Мы сделали это в Санкт-Петербурге.
+							Мы делаем это прямо сейчас в Москве, Самаре, Ярославле, Барнауле, Ульяновске, Йошкар-Оле и
+							ещё нескольких регионах. Это возможно и в вашем городе.
+							Как? Задайте вопрос о региональной программе Метрис.
+
+						</p>
+					</base-content>
+				</base-container>
+			</section>
+			<footer-page inline-template>
+				<footer class="footer-page">
+					<div class="row">
+						<div class="col left"><img class="logo" src="img/metris-black.png" alt="Metris"></div>
+						<div class="col center">
+							<div class="content">
+								<p>Сообщество профессионалов недвижимости</p>
+							</div>
+						</div>
+						<div class="col right">
+							<div class="content text-right">
+								<p><a href="">Обратная связь</a></p>
+							</div>
+						</div>
+						<div class="col center">
+							<div class="content">
+								<p><a href="https://gvate.ru/sozdanie-saytov/landing-page/" target="_blank">Разработка Лэндингов</a>&nbsp;&mdash;&#32;<span class="developer">Gvate Agency</span></p>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</footer-page>
+		</template>
+	</base-page>
+	<script type="module" src="/js/chunk-vendors.e7cadaea.js"></script>
+	<script type="module" src="/js/index.d9ac5cb2.js"></script>
+	<script>
+		! function() {
+			var e = document,
+				t = e.createElement("script");
+			if (!("noModule" in t) && "onbeforeload" in t) {
+				var n = !1;
+				e.addEventListener("beforeload", function(e) {
+					if (e.target === t) n = !0;
+					else if (!e.target.hasAttribute("nomodule") || !n) return;
+					e.preventDefault()
+				}, !0), t.type = "module", t.src = ".", e.head.appendChild(t), t.remove()
+			}
+		}();
+
+	</script>
+	<script type="text/javascript" src="/js/chunk-vendors-legacy.e7cadaea.js" nomodule></script>
+	<script type="text/javascript" src="/js/index-legacy.60020ad3.js" nomodule></script>
+</body>
+
 </html>

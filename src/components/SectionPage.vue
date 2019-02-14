@@ -155,16 +155,34 @@
 		//0 0 1px rgba(#000000, 1);
 
 		dl {
-			line-height: 1.25;
+			margin: 0;
+			padding-left: xl-to-xs(30, 24);
 
 			dt {
-				font-size: xl-to-xs(30, 20);
+				font-size: xl-to-xs(30, 24);
 				font-weight: 700;
+				line-height: 1.25;
+
+				&::before {
+					content: '';
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: -8px;
+					width: 8px;
+					height: 8px;
+					background-color: var(--color-primary);
+					transform: translateX(xl-to-xs(-30, -24));
+				}
+
+				&:not(:first-child) {
+					margin-top: 1em;
+				}
 			}
 
 			dd {
-				margin: 0.25em 0 1.5em;
+				margin: 0.5em 0 0;
 				font-size: xl-to-xs(20, 16);
+				line-height: 1.5;
 			}
 		}
 	}
