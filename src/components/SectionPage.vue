@@ -137,7 +137,11 @@
 		position: relative;
 		z-index: 1;
 		margin-right: 30%;
-		padding: xl-to-xs(120, 30) 0;
+		padding: xl-to-xs(80, 30) 0;
+
+		@media (width < env(--vw-xl)) {
+			padding-bottom: xl-to-xs(80, 315);
+		}
 
 		@media (width < env(--vw-sm)) {
 			margin-right: 0;
@@ -146,6 +150,23 @@
 
 	.tab-content-body {
 		margin-bottom: xl-to-xs(50, 30);
+		color: white;
+		//text-shadow: 0 0 1px rgba(#000000, 1),
+		//0 0 1px rgba(#000000, 1);
+
+		dl {
+			line-height: 1.25;
+
+			dt {
+				font-size: xl-to-xs(30, 20);
+				font-weight: 700;
+			}
+
+			dd {
+				margin: 0.25em 0 1.5em;
+				font-size: xl-to-xs(20, 16);
+			}
+		}
 	}
 
 	.tab-content-title {

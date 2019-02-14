@@ -28,17 +28,17 @@ block app
 								button.tab-bar-item(
 									:class="{current: currentTab === 2}"
 									@click="currentTab = 2"
-								) Информация и обучение
+								) Обучение и мероприятия
 
 								button.tab-bar-item(
 									:class="{current: currentTab === 3}"
 									@click="currentTab = 3"
-								) ???
+								) Бронирование онлайн
 
 								button.tab-bar-item(
 									:class="{current: currentTab === 4}"
 									@click="currentTab = 4"
-								) CRM
+								) Межрегиональные сделки
 
 					.tab-frame
 						.tab-frame-item(
@@ -53,8 +53,16 @@ block app
 							base-container
 								.tab-content
 									.tab-content-body
-										h3.tab-content-title База новостроек
-										p.tab-content-desc Мы даем вам базу новостроек, сервис, и платим вам комиссию
+										//-h3.tab-content-title База новостроек
+										//-p.tab-content-desc Мы даем вам базу новостроек, сервис, и платим вам комиссию
+										dl
+											dt Расширьте свой листинг объектов
+											dd Добавьте к ассортименту своих объектов все лучшие новостройки города
+											dt Подбирайте квартиры для клиентов
+											dd Задавайте параметры. Используйте фильтры. Удивляйте ассортиментом и качеством поиска
+											dt Делайте качественные презентации своим клиентам
+											dd Отправляйте презентации клиентам прямо из Метрис
+
 
 									.tab-content-actions
 										button-primary(
