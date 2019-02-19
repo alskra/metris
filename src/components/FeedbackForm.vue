@@ -104,6 +104,8 @@
 
 	.select {
 		appearance: none;
+		padding-right: 15px + 10px + 5px;
+		background: url("../img/icons/svg/arrow-down.svg") no-repeat right 15px center #ffffff;
 
 		&:-moz-focusring {
 			color: transparent;
