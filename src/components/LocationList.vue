@@ -51,9 +51,17 @@
 		&-title {
 			@include reset;
 
+			display: -webkit-box;
+
+			/* autoprefixer: ignore next */
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: normal;
+			-webkit-line-clamp: 2;
+
 			margin-bottom: 0.75em;
 			height: rem(17) * 1.25 * 2;
-			overflow: hidden;
 			font-size: rem(17);
 			font-weight: 600;
 			line-height: 1.25;
