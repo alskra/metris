@@ -62,8 +62,14 @@
 	}
 
 	.logo {
+		display: inline-block;
 		vertical-align: top;
 		max-width: 100%;
+
+		&-img {
+			display: block;
+			width: 100%;
+		}
 	}
 
 	.content {

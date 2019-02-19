@@ -5,13 +5,15 @@
 	import IconPin from './IconPin';
 	import IconFly from './IconFly';
 	import IconMail from './IconMail';
+	import IconPhone from './IconPhone';
 
 	export default {
 		name: 'LocationList',
 		components: {
 			IconPin,
 			IconFly,
-			IconMail
+			IconMail,
+			IconPhone
 		}
 	};
 </script>
@@ -19,12 +21,25 @@
 <style lang="scss" scoped>
 	.location-list {
 		@include reset;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: url("../img/mother-russia.svg") no-repeat 50% 50% / contain;
+			opacity: 0.075;
+		}
 	}
 
 	.row {
 		display: flex;
 		flex-wrap: wrap;
-		margin: 0 -10px xl-to-xs(-60, -30);
+		position: relative;
+		margin: 0 -10px xl-to-xs(-50, -30);
 	}
 
 	.location {
@@ -37,6 +52,8 @@
 			@include reset;
 
 			margin-bottom: 0.75em;
+			height: rem(17) * 1.25 * 2;
+			overflow: hidden;
 			font-size: rem(17);
 			font-weight: 600;
 			line-height: 1.25;
@@ -58,7 +75,7 @@
 				text-overflow: ellipsis;
 
 				& + & {
-					margin-top: 0.55em;
+					margin-top: 0.65em;
 				}
 
 				a {

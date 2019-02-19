@@ -20,8 +20,8 @@
 	.feedback-form {
 		@include reset;
 
-		margin-bottom: xl-to-xs(100, 50);
-		padding: xl-to-xs(100, 50) 0;
+		margin-bottom: xl-to-xs(80, 40);
+		padding: xl-to-xs(80, 40) 0;
 		background-color: #f9f9f9;
 	}
 
@@ -91,6 +91,10 @@
 
 		&:focus {
 			border-color: var(--color-primary);
+		}
+
+		&:invalid {
+			/*border-color: red;*/
 		}
 
 		&:focus-visible {
