@@ -4,12 +4,14 @@
 <script>
 	import ButtonPrimary from './ButtonPrimary';
 	import ButtonLink from './ButtonLink';
+	import LocationList from './LocationList';
 
 	export default {
 		name: 'SectionPage',
 		components: {
 			ButtonPrimary,
-			ButtonLink
+			ButtonLink,
+			LocationList
 		},
 		data() {
 			return {
@@ -29,7 +31,7 @@
 	.title {
 		@include reset;
 
-		margin: 0 0 0.5em;
+		margin: 0 0 0.75em;
 		color: #81306e;
 		font-size: xl-to-xs(50, 35);
 		font-weight: 800;
